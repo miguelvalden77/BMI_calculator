@@ -1,0 +1,1 @@
+export type sex = "Mujer" | "Hombre"

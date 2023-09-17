@@ -1,0 +1,25 @@
+<button (click)="updateSexo('Hombre')" [ngStyle]="{'background-color': sexo == 'Hombre' ? 'blue' : ''}">Hombre</button>
+<button (click)="updateSexo('Mujer')" [ngStyle]="{'background-color': sexo == 'Mujer' ? 'red' : ''}">Mujer</button>
+
+<section>
+    <h3>{{altura}}</h3>
+    <input type="range" min="80" max="220" [(ngModel)]="altura">
+</section>
+
+<section>
+    <p>Peso</p>
+    <h3>{{peso}}</h3>
+
+    <span (click)="updatePeso('+')">+</span>
+    <span (click)="updatePeso('-')">-</span>
+</section>
+
+<section>
+    <p>Edad</p>
+    <h3>{{edad}}</h3>
+
+    <span (click)="updateEdad('+')">+</span>
+    <span (click)="updateEdad('-')">-</span>
+</section>
+
+<button (click)="calcularBMI()">Calcular</button>
